@@ -30,7 +30,7 @@ contract ETHDaddy is ERC721 {
     }   
 
     function list(string memory _name, uint256 _cost) public onlyOwner{
-        maxSupply++;
+        maxSupply += 1;
         domains[maxSupply] = Domain(_name, _cost, false);
         //isOwned is set to false as when we list, we only list domains
         //that are not purchased yet
